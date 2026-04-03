@@ -316,7 +316,7 @@ const HomePage = () => {
       <section className="mt-8 md:mt-12 mx-4 md:mx-6 lg:mx-8 mb-8 md:mb-12">
         <div className="bg-card rounded-2xl md:rounded-3xl border border-border/50 p-6 md:p-10 lg:p-14 text-center shadow-soft">
           <span className="text-3xl md:text-4xl mb-3 block">🌶️</span>
-          <h2 className="font-bold text-lg md:text-2xl mb-2">Stay Updated with ZestUp</h2>
+          <h2 className="font-bold text-lg md:text-2xl mb-2">Stay Updated with ZestyJars</h2>
           <p className="text-xs md:text-sm text-muted-foreground mb-5 max-w-md mx-auto">
             Subscribe for exclusive deals, new product launches, and traditional recipes delivered to your inbox.
           </p>
@@ -341,7 +341,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="col-span-2 md:col-span-1">
-              <h3 className="text-xl font-bold text-primary mb-2">Zest<span className="text-secondary">Up</span></h3>
+              <h3 className="text-xl font-bold text-primary mb-2">Zesty<span className="text-secondary">Jars</span></h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Authentic homemade pickles & preserved foods, crafted with traditional recipes and delivered fresh.
               </p>
@@ -369,14 +369,14 @@ const HomePage = () => {
             <div>
               <h4 className="font-semibold text-sm mb-3">Contact</h4>
               <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground">
-                <span>hello@zestup.in</span>
+                <span>hello@zestyjars.in</span>
                 <span>+91 98765 43210</span>
                 <span>Mon-Sat, 9AM-6PM</span>
               </div>
             </div>
           </div>
           <div className="border-t border-border mt-6 md:mt-8 pt-4 md:pt-6 text-center">
-            <p className="text-[11px] md:text-xs text-muted-foreground">© 2026 ZestUp. All rights reserved. Made with ❤️ in India</p>
+            <p className="text-[11px] md:text-xs text-muted-foreground">© 2026 ZestyJars. All rights reserved. Made with ❤️ in India</p>
           </div>
         </div>
       </footer>

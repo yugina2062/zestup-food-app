@@ -10,7 +10,7 @@ const RegisterPage = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center mb-1">Create Account</h1>
-        <p className="text-sm text-muted-foreground text-center mb-8">Join ZestUp for fresh preserved flavors</p>
+        <p className="text-sm text-muted-foreground text-center mb-8">Join ZestyJars for fresh preserved flavors</p>
         <div className="space-y-4">
           <div>
             <label className="text-xs font-medium text-muted-foreground mb-1 block">Full Name</label>

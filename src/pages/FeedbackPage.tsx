@@ -26,7 +26,7 @@ const FeedbackPage = () => {
     <CustomerLayout>
       <div className="px-4 mt-4 mb-6">
         <h1 className="text-lg font-bold mb-1">Share Feedback</h1>
-        <p className="text-sm text-muted-foreground mb-6">How was your experience with ZestUp?</p>
+        <p className="text-sm text-muted-foreground mb-6">How was your experience with ZestyJars?</p>
 
         <div className="flex gap-2 mb-6 justify-center">
           {[1, 2, 3, 4, 5].map((s) => (

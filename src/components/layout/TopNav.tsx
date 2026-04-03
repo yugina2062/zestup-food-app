@@ -36,7 +36,7 @@ const TopNav = () => {
           </SheetTrigger>
           <SheetContent side="left" className="w-64 p-0">
             <div className="p-6 border-b border-border">
-              <h2 className="text-xl font-bold text-primary">ZestUp</h2>
+              <h2 className="text-xl font-bold text-primary">ZestyJars</h2>
               <p className="text-xs text-muted-foreground mt-1">Preserved Goodness</p>
             </div>
             <nav className="flex flex-col p-4 gap-1">
@@ -51,7 +51,7 @@ const TopNav = () => {
 
         {/* Logo */}
         <Link to="/" className="text-xl font-bold text-primary tracking-tight">
-          Zest<span className="text-secondary">Up</span>
+          Zesty<span className="text-secondary">Jars</span>
         </Link>
 
         {/* Desktop nav links */}

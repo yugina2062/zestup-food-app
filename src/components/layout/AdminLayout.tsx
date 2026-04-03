@@ -19,7 +19,7 @@ const AdminLayout = ({ children }: { children: ReactNode }) => {
       {/* Sidebar - hidden on mobile, shown as bottom bar */}
       <aside className="hidden md:flex flex-col w-56 bg-card border-r border-border p-4 fixed h-full">
         <Link to="/admin" className="text-xl font-bold text-primary mb-6 px-2">
-          Zest<span className="text-secondary">Up</span> <span className="text-xs text-muted-foreground font-normal">Admin</span>
+          Zesty<span className="text-secondary">Jars</span> <span className="text-xs text-muted-foreground font-normal">Admin</span>
         </Link>
         <nav className="flex flex-col gap-1 flex-1">
           {adminLinks.map((l) => (
@@ -38,7 +38,7 @@ const AdminLayout = ({ children }: { children: ReactNode }) => {
       <div className="flex-1 md:ml-56">
         {/* Mobile top bar */}
         <header className="md:hidden sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border px-4 h-14 flex items-center justify-between">
-          <Link to="/admin" className="text-lg font-bold text-primary">ZestUp <span className="text-xs text-muted-foreground font-normal">Admin</span></Link>
+          <Link to="/admin" className="text-lg font-bold text-primary">ZestyJars <span className="text-xs text-muted-foreground font-normal">Admin</span></Link>
           <Link to="/" className="text-xs text-muted-foreground">Exit</Link>
         </header>
 
