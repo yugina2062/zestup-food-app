@@ -9,7 +9,7 @@ const AdminLoginPage = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center mb-1">Admin Login</h1>
-        <p className="text-sm text-muted-foreground text-center mb-8">ZestUp Management Panel</p>
+        <p className="text-sm text-muted-foreground text-center mb-8">ZestyJars Management Panel</p>
         <div className="space-y-4">
           <Input placeholder="Admin email" className="rounded-xl" />
           <Input type="password" placeholder="Password" className="rounded-xl" />

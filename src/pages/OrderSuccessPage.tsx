@@ -9,7 +9,7 @@ const OrderSuccessPage = () => (
       <CheckCircle size={72} className="text-primary mx-auto mb-4" />
     </motion.div>
     <h1 className="text-2xl font-bold mb-2">Order Placed!</h1>
-    <p className="text-sm text-muted-foreground mb-1">Thank you for shopping with ZestUp</p>
+    <p className="text-sm text-muted-foreground mb-1">Thank you for shopping with ZestyJars</p>
     <p className="text-sm font-semibold mb-6">Order ID: <span className="text-primary">ZU-{Math.floor(10000 + Math.random() * 90000)}</span></p>
     <div className="flex flex-col gap-3 w-full max-w-xs">
       <Link to="/order-tracking/ZU-10042">
