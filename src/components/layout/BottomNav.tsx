@@ -14,7 +14,7 @@ const BottomNav = () => {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-t border-border safe-area-bottom">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-t border-border">
       <div className="flex items-center justify-around h-16 max-w-5xl mx-auto">
         {items.map((item) => {
           const active = pathname === item.to;
@@ -23,7 +23,7 @@ const BottomNav = () => {
               <div className={`p-1.5 rounded-xl transition-colors ${active ? "bg-primary/10" : ""}`}>
                 <item.icon size={20} className={`transition-colors ${active ? "text-primary" : "text-muted-foreground"}`} fill={active ? "currentColor" : "none"} />
                 {(item.badge ?? 0) > 0 && (
-                  <span className="absolute top-0 right-2 bg-secondary text-secondary-foreground text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                  <span className="absolute top-0 right-2 bg-accent text-accent-foreground text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                     {item.badge}
                   </span>
                 )}

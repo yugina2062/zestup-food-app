@@ -18,7 +18,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       <Link to={`/product/${product.id}`} className="relative">
         <img src={product.image} alt={product.name} loading="lazy" width={512} height={512} className="w-full aspect-square object-cover" />
         {product.originalPrice && (
-          <span className="absolute top-2 left-2 bg-secondary text-secondary-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
+          <span className="absolute top-2 left-2 bg-accent text-accent-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
             {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
           </span>
         )}
@@ -34,15 +34,15 @@ const ProductCard = ({ product }: { product: Product }) => {
           {product.name}
         </Link>
         <div className="flex items-center gap-1 mb-2">
-          <Star size={12} className="text-secondary fill-secondary" />
+          <Star size={12} className="text-accent fill-accent" />
           <span className="text-xs font-medium">{product.rating}</span>
           <span className="text-[10px] text-muted-foreground">({product.reviews})</span>
         </div>
         <div className="flex items-center justify-between mt-auto">
           <div>
-            <span className="text-base font-bold">₹{product.price}</span>
+            <span className="text-base font-bold">Rs.{product.price}</span>
             {product.originalPrice && (
-              <span className="text-xs text-muted-foreground line-through ml-1">₹{product.originalPrice}</span>
+              <span className="text-xs text-muted-foreground line-through ml-1">Rs.{product.originalPrice}</span>
             )}
           </div>
           <button
