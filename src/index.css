@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,81 +6,81 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 0 0% 15%;
+    --background: 30 25% 96%;
+    --foreground: 0 0% 12%;
 
-    --card: 40 30% 98%;
-    --card-foreground: 0 0% 15%;
+    --card: 30 20% 99%;
+    --card-foreground: 0 0% 12%;
 
-    --popover: 40 30% 98%;
-    --popover-foreground: 0 0% 15%;
+    --popover: 30 20% 99%;
+    --popover-foreground: 0 0% 12%;
 
-    --primary: 0 65% 42%;
+    --primary: 0 60% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 56% 52%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 137 20% 30%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 0 0% 45%;
+    --accent: 25 85% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 43 56% 52%;
-    --accent-foreground: 0 0% 10%;
+    --muted: 30 15% 92%;
+    --muted-foreground: 0 0% 42%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 0 65% 42%;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 0 60% 30%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 0 65% 42%;
+    --sidebar-primary: 0 60% 30%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 40 20% 94%;
-    --sidebar-accent-foreground: 0 0% 15%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 0 65% 42%;
+    --sidebar-accent: 30 15% 94%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 0 60% 30%;
 
-    --olive: 0 65% 42%;
-    --olive-light: 0 40% 94%;
-    --gold: 43 56% 52%;
-    --gold-light: 43 40% 92%;
-    --beige: 40 33% 96%;
-    --beige-dark: 40 20% 88%;
+    --olive: 137 20% 30%;
+    --olive-light: 137 20% 94%;
+    --gold: 25 85% 50%;
+    --gold-light: 25 50% 92%;
+    --beige: 30 25% 96%;
+    --beige-dark: 30 15% 88%;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 40 30% 95%;
-    --card: 0 0% 12%;
-    --card-foreground: 40 30% 95%;
-    --popover: 0 0% 12%;
-    --popover-foreground: 40 30% 95%;
-    --primary: 0 65% 48%;
+    --background: 0 0% 6%;
+    --foreground: 30 20% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 30 20% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 30 20% 95%;
+    --primary: 0 55% 35%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 43 56% 52%;
+    --secondary: 137 20% 35%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 18%;
-    --muted-foreground: 40 20% 65%;
-    --accent: 43 56% 52%;
+    --accent: 25 80% 50%;
     --accent-foreground: 0 0% 100%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 30 15% 65%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 65% 48%;
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 40 30% 95%;
-    --sidebar-primary: 0 65% 48%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 55% 35%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 0 55% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 40 30% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 65% 48%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 30 20% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 55% 35%;
   }
 }
 
@@ -99,5 +99,12 @@
   }
   .shadow-card {
     box-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.06);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
