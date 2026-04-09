@@ -8,48 +8,46 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, Star, Truck, ShieldCheck, Leaf, Clock, ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
-import { useCart } from "@/context/CartContext";
 
 const heroSlides = [
   {
     image: heroBanner1,
     tag: "UP TO 30% OFF",
-    title: "Fresh Homemade\nPickles & Achar",
-    subtitle: "Handcrafted with love, delivered to your door",
+    title: "Authentic Nepali\nHomemade Pickles",
+    subtitle: "Traditional achar & preserved foods, handcrafted with love",
     cta: "Shop Now",
   },
   {
     image: heroBanner2,
     tag: "NEW ARRIVALS",
-    title: "Authentic Spice\nBlends Collection",
-    subtitle: "Discover traditional recipes from across India",
+    title: "Traditional Spice\nBlends Collection",
+    subtitle: "Discover authentic recipes from the Himalayas",
     cta: "Explore",
   },
   {
     image: heroBanner3,
     tag: "BESTSELLER",
-    title: "Grandma's Secret\nMango Pickle",
-    subtitle: "Made with hand-picked Rajapuri mangoes",
+    title: "Grandma's Secret\nMango Achar",
+    subtitle: "Made with hand-picked raw mangoes & Himalayan spices",
     cta: "Order Now",
   },
 ];
 
 const trustBadges = [
-  { icon: Truck, title: "Free Delivery", desc: "On orders above ₹499" },
+  { icon: Truck, title: "Free Delivery", desc: "On orders above Rs.499" },
   { icon: ShieldCheck, title: "100% Authentic", desc: "Homemade & natural" },
   { icon: Leaf, title: "No Preservatives", desc: "Pure & organic" },
   { icon: Clock, title: "Fresh Daily", desc: "Made to order" },
 ];
 
 const testimonials = [
-  { name: "Priya Sharma", location: "Mumbai", rating: 5, text: "The mango pickle reminds me of my grandmother's recipe. Absolutely authentic taste!", avatar: "PS" },
-  { name: "Rahul Verma", location: "Delhi", rating: 5, text: "Best quality preserved foods I've found online. The packaging is excellent too.", avatar: "RV" },
-  { name: "Anita Desai", location: "Bangalore", rating: 4, text: "Love the variety! The mixed vegetable pickle is our family's new favourite.", avatar: "AD" },
+  { name: "Sita Sharma", location: "Kathmandu", rating: 5, text: "The mango achar reminds me of my grandmother's recipe. Absolutely authentic taste!", avatar: "SS" },
+  { name: "Ram Thapa", location: "Pokhara", rating: 5, text: "Best quality preserved foods I've found online. The packaging is excellent too.", avatar: "RT" },
+  { name: "Anita Gurung", location: "Biratnagar", rating: 4, text: "Love the variety! The mixed vegetable pickle is our family's new favourite.", avatar: "AG" },
 ];
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { addToCart } = useCart();
   const bestSelling = products.filter((_, i) => i < 4);
   const recommended = products.filter((_, i) => i >= 4);
   const flashDeals = products.filter((p) => p.originalPrice);
@@ -82,13 +80,13 @@ const HomePage = () => {
               height={800}
               className="w-full h-52 sm:h-64 md:h-[400px] lg:h-[480px] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-center pl-6 md:pl-14 lg:pl-20 max-w-xl lg:max-w-2xl">
               <motion.span
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-[10px] md:text-xs font-bold bg-secondary text-secondary-foreground px-3 py-1 rounded-full w-fit mb-3"
+                className="text-[10px] md:text-xs font-bold bg-accent text-accent-foreground px-3 py-1 rounded-full w-fit mb-3"
               >
                 {heroSlides[currentSlide].tag}
               </motion.span>
@@ -96,7 +94,7 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-card leading-tight whitespace-pre-line"
+                className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-pre-line"
               >
                 {heroSlides[currentSlide].title}
               </motion.h1>
@@ -104,7 +102,7 @@ const HomePage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.45 }}
-                className="text-card/80 text-xs md:text-base mt-2 md:mt-3 hidden sm:block"
+                className="text-white/80 text-xs md:text-base mt-2 md:mt-3 hidden sm:block"
               >
                 {heroSlides[currentSlide].subtitle}
               </motion.p>
@@ -121,21 +119,19 @@ const HomePage = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Carousel controls */}
-        <button onClick={prevSlide} className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-card/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-card/50">
-          <ChevronLeft size={20} className="text-card" />
+        <button onClick={prevSlide} className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40">
+          <ChevronLeft size={20} className="text-white" />
         </button>
-        <button onClick={nextSlide} className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-card/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-card/50">
-          <ChevronRight size={20} className="text-card" />
+        <button onClick={nextSlide} className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40">
+          <ChevronRight size={20} className="text-white" />
         </button>
 
-        {/* Dots */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
           {heroSlides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`h-1.5 rounded-full transition-all ${i === currentSlide ? "w-6 bg-card" : "w-1.5 bg-card/50"}`}
+              className={`h-1.5 rounded-full transition-all ${i === currentSlide ? "w-6 bg-white" : "w-1.5 bg-white/50"}`}
             />
           ))}
         </div>
@@ -150,10 +146,10 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-3 p-3 md:p-4 bg-card rounded-xl md:rounded-2xl border border-border/50 shadow-soft"
+              className="flex items-center gap-3 p-3 md:p-4 bg-card rounded-2xl border border-border/50 shadow-soft"
             >
-              <div className="p-2 md:p-2.5 bg-primary/10 rounded-xl shrink-0">
-                <badge.icon size={20} className="text-primary" />
+              <div className="p-2.5 bg-secondary/10 rounded-xl shrink-0">
+                <badge.icon size={20} className="text-secondary" />
               </div>
               <div>
                 <p className="text-xs md:text-sm font-semibold">{badge.title}</p>
@@ -199,7 +195,7 @@ const HomePage = () => {
       {/* Flash Deals */}
       {flashDeals.length > 0 && (
         <section className="mt-8 md:mt-12 px-4 md:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl md:rounded-3xl p-5 md:p-8">
+          <div className="bg-gradient-to-br from-primary via-primary to-primary/80 rounded-2xl md:rounded-3xl p-5 md:p-8">
             <div className="flex items-center justify-between mb-4 md:mb-6">
               <div>
                 <div className="flex items-center gap-2 mb-1">
@@ -243,10 +239,10 @@ const HomePage = () => {
       <section className="mt-8 md:mt-12 mx-4 md:mx-6 lg:mx-8">
         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden">
           <img src={heroBanner2} alt="Special collection" loading="lazy" width={1920} height={800} className="w-full h-40 md:h-56 lg:h-64 object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 to-transparent flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
             <div className="pl-6 md:pl-14 lg:pl-20">
-              <p className="text-secondary text-xs md:text-sm font-bold mb-1">SPECIAL COLLECTION</p>
-              <h3 className="text-card text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
+              <p className="text-accent text-xs md:text-sm font-bold mb-1">SPECIAL COLLECTION</p>
+              <h3 className="text-white text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 Festive Season<br />Gift Hampers
               </h3>
               <Link
@@ -295,7 +291,7 @@ const HomePage = () => {
               <p className="text-sm md:text-base text-foreground/80 mb-4 leading-relaxed">{t.text}</p>
               <div className="flex items-center gap-1 mb-3">
                 {Array.from({ length: 5 }).map((_, si) => (
-                  <Star key={si} size={14} className={si < t.rating ? "text-secondary fill-secondary" : "text-muted"} />
+                  <Star key={si} size={14} className={si < t.rating ? "text-accent fill-accent" : "text-muted"} />
                 ))}
               </div>
               <div className="flex items-center gap-3">
@@ -337,13 +333,15 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border mt-0">
+      <footer className="bg-card border-t border-border">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="col-span-2 md:col-span-1">
-              <h3 className="text-xl font-bold text-primary mb-2">Zesty<span className="text-secondary">Jars</span></h3>
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-primary">Zesty</span><span className="text-secondary">Jars</span>
+              </h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Authentic homemade pickles & preserved foods, crafted with traditional recipes and delivered fresh.
+                Authentic Nepali homemade pickles & preserved foods, crafted with traditional recipes and delivered fresh.
               </p>
             </div>
             <div>
@@ -369,14 +367,14 @@ const HomePage = () => {
             <div>
               <h4 className="font-semibold text-sm mb-3">Contact</h4>
               <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground">
-                <span>hello@zestyjars.in</span>
-                <span>+91 98765 43210</span>
-                <span>Mon-Sat, 9AM-6PM</span>
+                <span>hello@zestyjars.com.np</span>
+                <span>+977 9801234567</span>
+                <span>Sun-Fri, 9AM-6PM</span>
               </div>
             </div>
           </div>
           <div className="border-t border-border mt-6 md:mt-8 pt-4 md:pt-6 text-center">
-            <p className="text-[11px] md:text-xs text-muted-foreground">© 2026 ZestyJars. All rights reserved. Made with ❤️ in India</p>
+            <p className="text-[11px] md:text-xs text-muted-foreground">© 2026 ZestyJars. All rights reserved. Made with ❤️ in Nepal</p>
           </div>
         </div>
       </footer>
