@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, Users, Package, FolderOpen, ShoppingBag, Ticket, LogOut } from "lucide-react";
+import { LayoutDashboard, Users, Package, FolderOpen, ShoppingBag, Ticket, BarChart3, Bell, UserCircle, LogOut } from "lucide-react";
 
 const adminLinks = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard },
@@ -9,6 +9,9 @@ const adminLinks = [
   { to: "/admin/categories", label: "Categories", icon: FolderOpen },
   { to: "/admin/orders", label: "Orders", icon: ShoppingBag },
   { to: "/admin/coupons", label: "Coupons", icon: Ticket },
+  { to: "/admin/reports", label: "Reports", icon: BarChart3 },
+  { to: "/admin/notifications", label: "Alerts", icon: Bell },
+  { to: "/admin/profile", label: "Profile", icon: UserCircle },
 ];
 
 const AdminLayout = ({ children }: { children: ReactNode }) => {
