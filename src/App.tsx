@@ -35,6 +35,7 @@ import ManageCouponsPage from "./pages/admin/ManageCouponsPage";
 import AdminReportsPage from "./pages/admin/AdminReportsPage";
 import AdminNotificationsPage from "./pages/admin/AdminNotificationsPage";
 import AdminProfilePage from "./pages/admin/AdminProfilePage";
+import AdminFeedbackPage from "./pages/admin/AdminFeedbackPage";
 
 import NotFound from "./pages/NotFound";
 
@@ -77,6 +78,7 @@ const App = () => (
             <Route path="/admin/reports" element={<AdminReportsPage />} />
             <Route path="/admin/notifications" element={<AdminNotificationsPage />} />
             <Route path="/admin/profile" element={<AdminProfilePage />} />
+            <Route path="/admin/feedback" element={<AdminFeedbackPage />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
